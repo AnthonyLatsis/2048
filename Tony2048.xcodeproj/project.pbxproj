@@ -1,0 +1,293 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		59323A381CC3CBCA00FFDE96 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59323A371CC3CBCA00FFDE96 /* AppDelegate.swift */; };
+		59323A3A1CC3CBCA00FFDE96 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59323A391CC3CBCA00FFDE96 /* ViewController.swift */; };
+		59323A3D1CC3CBCA00FFDE96 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 59323A3B1CC3CBCA00FFDE96 /* Main.storyboard */; };
+		59323A3F1CC3CBCA00FFDE96 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 59323A3E1CC3CBCA00FFDE96 /* Assets.xcassets */; };
+		59323A421CC3CBCA00FFDE96 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 59323A401CC3CBCA00FFDE96 /* LaunchScreen.storyboard */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		59323A341CC3CBCA00FFDE96 /* Tony2048.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Tony2048.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		59323A371CC3CBCA00FFDE96 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		59323A391CC3CBCA00FFDE96 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		59323A3C1CC3CBCA00FFDE96 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		59323A3E1CC3CBCA00FFDE96 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		59323A411CC3CBCA00FFDE96 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		59323A431CC3CBCA00FFDE96 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		59323A311CC3CBCA00FFDE96 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		59323A2B1CC3CBCA00FFDE96 = {
+			isa = PBXGroup;
+			children = (
+				59323A361CC3CBCA00FFDE96 /* Tony2048 */,
+				59323A351CC3CBCA00FFDE96 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		59323A351CC3CBCA00FFDE96 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				59323A341CC3CBCA00FFDE96 /* Tony2048.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		59323A361CC3CBCA00FFDE96 /* Tony2048 */ = {
+			isa = PBXGroup;
+			children = (
+				59323A371CC3CBCA00FFDE96 /* AppDelegate.swift */,
+				59323A391CC3CBCA00FFDE96 /* ViewController.swift */,
+				59323A3B1CC3CBCA00FFDE96 /* Main.storyboard */,
+				59323A3E1CC3CBCA00FFDE96 /* Assets.xcassets */,
+				59323A401CC3CBCA00FFDE96 /* LaunchScreen.storyboard */,
+				59323A431CC3CBCA00FFDE96 /* Info.plist */,
+			);
+			path = Tony2048;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		59323A331CC3CBCA00FFDE96 /* Tony2048 */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 59323A461CC3CBCA00FFDE96 /* Build configuration list for PBXNativeTarget "Tony2048" */;
+			buildPhases = (
+				59323A301CC3CBCA00FFDE96 /* Sources */,
+				59323A311CC3CBCA00FFDE96 /* Frameworks */,
+				59323A321CC3CBCA00FFDE96 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Tony2048;
+			productName = Tony2048;
+			productReference = 59323A341CC3CBCA00FFDE96 /* Tony2048.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		59323A2C1CC3CBCA00FFDE96 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0730;
+				LastUpgradeCheck = 0730;
+				ORGANIZATIONNAME = "Anthony Latsis";
+				TargetAttributes = {
+					59323A331CC3CBCA00FFDE96 = {
+						CreatedOnToolsVersion = 7.3;
+					};
+				};
+			};
+			buildConfigurationList = 59323A2F1CC3CBCA00FFDE96 /* Build configuration list for PBXProject "Tony2048" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 59323A2B1CC3CBCA00FFDE96;
+			productRefGroup = 59323A351CC3CBCA00FFDE96 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				59323A331CC3CBCA00FFDE96 /* Tony2048 */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		59323A321CC3CBCA00FFDE96 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				59323A421CC3CBCA00FFDE96 /* LaunchScreen.storyboard in Resources */,
+				59323A3F1CC3CBCA00FFDE96 /* Assets.xcassets in Resources */,
+				59323A3D1CC3CBCA00FFDE96 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		59323A301CC3CBCA00FFDE96 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				59323A3A1CC3CBCA00FFDE96 /* ViewController.swift in Sources */,
+				59323A381CC3CBCA00FFDE96 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		59323A3B1CC3CBCA00FFDE96 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				59323A3C1CC3CBCA00FFDE96 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		59323A401CC3CBCA00FFDE96 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				59323A411CC3CBCA00FFDE96 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		59323A441CC3CBCA00FFDE96 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		59323A451CC3CBCA00FFDE96 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		59323A471CC3CBCA00FFDE96 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = Tony2048/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = none.Tony2048;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		59323A481CC3CBCA00FFDE96 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = Tony2048/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = none.Tony2048;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		59323A2F1CC3CBCA00FFDE96 /* Build configuration list for PBXProject "Tony2048" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				59323A441CC3CBCA00FFDE96 /* Debug */,
+				59323A451CC3CBCA00FFDE96 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		59323A461CC3CBCA00FFDE96 /* Build configuration list for PBXNativeTarget "Tony2048" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				59323A471CC3CBCA00FFDE96 /* Debug */,
+				59323A481CC3CBCA00FFDE96 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 59323A2C1CC3CBCA00FFDE96 /* Project object */;
+}
