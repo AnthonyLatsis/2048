@@ -12,6 +12,10 @@
 		59323A3D1CC3CBCA00FFDE96 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 59323A3B1CC3CBCA00FFDE96 /* Main.storyboard */; };
 		59323A3F1CC3CBCA00FFDE96 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 59323A3E1CC3CBCA00FFDE96 /* Assets.xcassets */; };
 		59323A421CC3CBCA00FFDE96 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 59323A401CC3CBCA00FFDE96 /* LaunchScreen.storyboard */; };
+		59323A4E1CC4703000FFDE96 /* ScoreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59323A4D1CC4703000FFDE96 /* ScoreViewController.swift */; };
+		59323A541CC5DE5100FFDE96 /* MainFieldController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59323A531CC5DE5100FFDE96 /* MainFieldController.swift */; };
+		59323A561CC72AF400FFDE96 /* SubviewControllerType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59323A551CC72AF400FFDE96 /* SubviewControllerType.swift */; };
+		5948D0051CCEBC5700E28C59 /* GlobalFuncClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5948D0041CCEBC5700E28C59 /* GlobalFuncClass.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +26,10 @@
 		59323A3E1CC3CBCA00FFDE96 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		59323A411CC3CBCA00FFDE96 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		59323A431CC3CBCA00FFDE96 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		59323A4D1CC4703000FFDE96 /* ScoreViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScoreViewController.swift; sourceTree = "<group>"; };
+		59323A531CC5DE5100FFDE96 /* MainFieldController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainFieldController.swift; sourceTree = "<group>"; };
+		59323A551CC72AF400FFDE96 /* SubviewControllerType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SubviewControllerType.swift; sourceTree = "<group>"; };
+		5948D0041CCEBC5700E28C59 /* GlobalFuncClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GlobalFuncClass.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,8 +62,12 @@
 		59323A361CC3CBCA00FFDE96 /* Tony2048 */ = {
 			isa = PBXGroup;
 			children = (
-				59323A371CC3CBCA00FFDE96 /* AppDelegate.swift */,
+				5948D0041CCEBC5700E28C59 /* GlobalFuncClass.swift */,
+				59323A551CC72AF400FFDE96 /* SubviewControllerType.swift */,
 				59323A391CC3CBCA00FFDE96 /* ViewController.swift */,
+				59323A4D1CC4703000FFDE96 /* ScoreViewController.swift */,
+				59323A531CC5DE5100FFDE96 /* MainFieldController.swift */,
+				59323A371CC3CBCA00FFDE96 /* AppDelegate.swift */,
 				59323A3B1CC3CBCA00FFDE96 /* Main.storyboard */,
 				59323A3E1CC3CBCA00FFDE96 /* Assets.xcassets */,
 				59323A401CC3CBCA00FFDE96 /* LaunchScreen.storyboard */,
@@ -136,7 +148,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				59323A3A1CC3CBCA00FFDE96 /* ViewController.swift in Sources */,
+				59323A541CC5DE5100FFDE96 /* MainFieldController.swift in Sources */,
+				59323A561CC72AF400FFDE96 /* SubviewControllerType.swift in Sources */,
 				59323A381CC3CBCA00FFDE96 /* AppDelegate.swift in Sources */,
+				59323A4E1CC4703000FFDE96 /* ScoreViewController.swift in Sources */,
+				5948D0051CCEBC5700E28C59 /* GlobalFuncClass.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -286,6 +302,7 @@
 				59323A481CC3CBCA00FFDE96 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
