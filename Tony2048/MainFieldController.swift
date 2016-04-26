@@ -279,31 +279,8 @@ final class MainFieldController: UIViewController, CellViewControllerType {
                 }
                 var count = rowQuantity - 1
                 while count >= labelToBeMoved.position.y {
-                    let examinedLabel = cellLabelInPosition((labelToBeMoved.position.x, count))
-                    if examinedLabel == nil {
-                        if count == rowQuantity - 1 {
-                            moveLabel(labelToBeMoved, toPosition: (labelToBeMoved.position.x, count),
-                                      direction: gesture.direction, needToSet: false)
-                            break
-                        } else {
-                            print(cellLabels)
-                            let previousLabel = cellLabelInPosition((labelToBeMoved.position.x, count + 1))
-                            if compareLabels(previousLabel!.label, secondLabel: labelToBeMoved.label) {
-                                mergeLabels(previousLabel!, movingLabel: labelToBeMoved, direction: gesture.direction)
-                            } else {
-                                moveLabel(labelToBeMoved, toPosition: (labelToBeMoved.position.x, count), direction: gesture.direction, needToSet: false)
-                            }
-                            break
-                        }
-                    } else {
-                        if count == labelToBeMoved.position.y {
-                            let previousLabel = cellLabelInPosition((labelToBeMoved.position.x, count + 1))
-                            
-                            if compareLabels(previousLabel!.label, secondLabel: labelToBeMoved.label) {
-                                mergeLabels(previousLabel!, movingLabel: labelToBeMoved, direction: gesture.direction)
-                                break
-                            }
-                        }
+                    if decideLabelAction(labelToBeMoved, gesture: gesture, count: count) {
+                        break
                     }
                     count -= 1
                 }
@@ -322,29 +299,8 @@ final class MainFieldController: UIViewController, CellViewControllerType {
                 }
                 var count = 0
                 while count <= labelToBeMoved.position.y {
-                    let examinedLabel = cellLabelInPosition((labelToBeMoved.position.x, count))
-                    if examinedLabel == nil {
-                        if count == 0 {
-                            moveLabel(labelToBeMoved, toPosition: (labelToBeMoved.position.x, count), direction: gesture.direction, needToSet: false)
-                            break
-                        } else {
-                            let previousLabel = cellLabelInPosition((labelToBeMoved.position.x, count - 1))
-                            if compareLabels(previousLabel!.label, secondLabel: labelToBeMoved.label) {
-                                mergeLabels(previousLabel!, movingLabel: labelToBeMoved, direction: gesture.direction)
-                            } else {
-                                moveLabel(labelToBeMoved, toPosition: (labelToBeMoved.position.x, count), direction: gesture.direction, needToSet: false)
-                            }
-                            break
-                        }
-                    } else {
-                        if count == labelToBeMoved.position.y {
-                            let previousLabel = cellLabelInPosition((labelToBeMoved.position.x, count - 1))
-                            
-                            if compareLabels(previousLabel!.label, secondLabel: labelToBeMoved.label) {
-                                mergeLabels(previousLabel!, movingLabel: labelToBeMoved, direction: gesture.direction)
-                                break
-                            }
-                        }
+                    if decideLabelAction(labelToBeMoved, gesture: gesture, count: count) {
+                        break
                     }
                     count += 1
                 }
@@ -363,29 +319,8 @@ final class MainFieldController: UIViewController, CellViewControllerType {
                 }
                 var count = 0
                 while count <= labelToBeMoved.position.x {
-                    let examinedLabel = cellLabelInPosition((count, labelToBeMoved.position.y))
-                    if examinedLabel == nil {
-                        if count == 0 {
-                            moveLabel(labelToBeMoved, toPosition: (count, labelToBeMoved.position.y), direction: gesture.direction, needToSet: false)
-                            break
-                        } else {
-                            let previousLabel = cellLabelInPosition((count - 1, labelToBeMoved.position.y))
-                            if compareLabels(previousLabel!.label, secondLabel: labelToBeMoved.label) {
-                                mergeLabels(previousLabel!, movingLabel: labelToBeMoved, direction: gesture.direction)
-                            } else {
-                                moveLabel(labelToBeMoved, toPosition: (count, labelToBeMoved.position.y), direction: gesture.direction, needToSet: false)
-                            }
-                            break
-                        }
-                    } else {
-                        if count == labelToBeMoved.position.x {
-                            let previousLabel = cellLabelInPosition((count - 1, labelToBeMoved.position.y))
-                            
-                            if compareLabels(previousLabel!.label, secondLabel: labelToBeMoved.label) {
-                                mergeLabels(previousLabel!, movingLabel: labelToBeMoved, direction: gesture.direction)
-                                break
-                            }
-                        }
+                    if decideLabelAction(labelToBeMoved, gesture: gesture, count: count) {
+                        break
                     }
                     count += 1
                 }
@@ -404,29 +339,8 @@ final class MainFieldController: UIViewController, CellViewControllerType {
                 }
                 var count = 3
                 while count >= labelToBeMoved.position.x {
-                    let examinedLabel = cellLabelInPosition((count, labelToBeMoved.position.y))
-                    if examinedLabel == nil {
-                        if count == rowQuantity - 1 {
-                            moveLabel(labelToBeMoved, toPosition: (count, labelToBeMoved.position.y), direction: gesture.direction, needToSet: false)
-                            break
-                        } else {
-                            let previousLabel = cellLabelInPosition((count + 1, labelToBeMoved.position.y))
-                            if compareLabels(previousLabel!.label, secondLabel: labelToBeMoved.label) {
-                                mergeLabels(previousLabel!, movingLabel: labelToBeMoved, direction: gesture.direction)
-                            } else {
-                                moveLabel(labelToBeMoved, toPosition: (count, labelToBeMoved.position.y), direction: gesture.direction, needToSet: false)
-                            }
-                            break
-                        }
-                    } else {
-                        if count == labelToBeMoved.position.x {
-                            let previousLabel = cellLabelInPosition((count + 1, labelToBeMoved.position.y))
-                            
-                            if compareLabels(previousLabel!.label, secondLabel: labelToBeMoved.label) {
-                                mergeLabels(previousLabel!, movingLabel: labelToBeMoved, direction: gesture.direction)
-                                break
-                            }
-                        }
+                    if decideLabelAction(labelToBeMoved, gesture: gesture, count: count) {
+                        break
                     }
                     count -= 1
                 }
@@ -574,4 +488,83 @@ final class MainFieldController: UIViewController, CellViewControllerType {
         
         addLabelToRandomFreePosition()
     }
+    
+    func decideLabelAction(labelToBeMoved: CellLabel, gesture: UISwipeGestureRecognizer, count: Int) -> Bool {
+        let previousLabel = cellLabelInPosition(previousLabelPosition(labelToBeMoved, count: count, gestureDirection: gesture.direction))
+        let examinedLabelLocation = examinedLabelPosition(labelToBeMoved, count: count, gestureDirection: gesture.direction)
+        let examinedLabel = cellLabelInPosition(examinedLabelLocation)
+        let labelToBeMovedLocation = labelToBeMovedPosition(labelToBeMoved, gestureDirection: gesture.direction)
+        let wall = wallInDirection(gesture.direction)
+        
+        if examinedLabel == nil {
+            if count == wall {
+                moveLabel(labelToBeMoved, toPosition: examinedLabelLocation,
+                          direction: gesture.direction, needToSet: false)
+                return true
+            } else {
+                if compareLabels(previousLabel!.label, secondLabel: labelToBeMoved.label) {
+                    mergeLabels(previousLabel!, movingLabel: labelToBeMoved, direction: gesture.direction)
+                } else {
+                    moveLabel(labelToBeMoved, toPosition: examinedLabelLocation, direction: gesture.direction, needToSet: false)
+                }
+                return true
+            }
+        } else {
+            if count == labelToBeMovedLocation {
+                if compareLabels(previousLabel!.label, secondLabel: labelToBeMoved.label) {
+                    mergeLabels(previousLabel!, movingLabel: labelToBeMoved, direction: gesture.direction)
+                    return true
+                }
+            }
+        }
+        return false
+    }
+    
+    func previousLabelPosition(labelToBeMoved: CellLabel, count: Int, gestureDirection: UISwipeGestureRecognizerDirection) -> Position {
+        switch gestureDirection {
+        case UISwipeGestureRecognizerDirection.Down:
+            return (labelToBeMoved.position.x, count - 1)
+        case UISwipeGestureRecognizerDirection.Up:
+            return (labelToBeMoved.position.x, count + 1)
+        case UISwipeGestureRecognizerDirection.Right:
+            return (count + 1, labelToBeMoved.position.y)
+        case UISwipeGestureRecognizerDirection.Left:
+            return (count - 1, labelToBeMoved.position.y)
+        default:
+            fatalError()
+        }
+    }
+
+    func wallInDirection(gestureDirection: UISwipeGestureRecognizerDirection) -> Int {
+        switch gestureDirection {
+        case UISwipeGestureRecognizerDirection.Up, UISwipeGestureRecognizerDirection.Right :
+            return rowQuantity - 1
+        case UISwipeGestureRecognizerDirection.Left, UISwipeGestureRecognizerDirection.Down :
+            return 0
+        default: fatalError()
+        }
+    }
+
+    func examinedLabelPosition(labelToBeMoved: CellLabel, count: Int, gestureDirection: UISwipeGestureRecognizerDirection) -> Position {
+        switch  gestureDirection {
+        case UISwipeGestureRecognizerDirection.Down, UISwipeGestureRecognizerDirection.Up:
+            return (labelToBeMoved.position.x, count)
+        case UISwipeGestureRecognizerDirection.Left, UISwipeGestureRecognizerDirection.Right:
+            return (count, labelToBeMoved.position.y)
+        default:
+            fatalError()
+        }
+    }
+    
+    func labelToBeMovedPosition(labelToBeMoved: CellLabel, gestureDirection: UISwipeGestureRecognizerDirection) -> Int {
+        switch gestureDirection {
+        case UISwipeGestureRecognizerDirection.Down, UISwipeGestureRecognizerDirection.Up:
+        return labelToBeMoved.position.y
+        case UISwipeGestureRecognizerDirection.Left, UISwipeGestureRecognizerDirection.Right:
+        return labelToBeMoved.position.x
+        default:
+        fatalError()
+        }
+    }
+
 }
